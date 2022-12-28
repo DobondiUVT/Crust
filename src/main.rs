@@ -35,7 +35,6 @@ fn execute_file(file_path: &Path, file_output: &mut String) {
         std::process::exit(1);
     }
     file_output.push_str(&String::from_utf8_lossy(&output.stdout));
-    // print!("\nFile outputs: \n<startTestFile>\n{}\n</endTestFile>\n", file_output);
 }
 fn get_test_output(file_path: &Path, test_output: &mut String) {
     let mut path_buf = PathBuf::new();
@@ -43,7 +42,6 @@ fn get_test_output(file_path: &Path, test_output: &mut String) {
     path_buf.set_extension("txt");
     let contents = fs::read_to_string(path_buf).expect("Cannot read test file");
     test_output.push_str(&contents);
-    // print!("\nTest outputs: \n<startFile>\n{}\n</endFile>\n", test_output);
 }
 fn compare_test(file_output: &String, test_output: &String) -> bool {
     if file_output == test_output {
