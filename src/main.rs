@@ -61,7 +61,6 @@ fn main() {
         eprintln!("File does not exist");
         std::process::exit(1);
     }
-
     if cfg!(target_os = "windows") {
         compile_code(file_path);
         execute_file(file_path, &mut file_output);
