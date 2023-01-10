@@ -1,3 +1,6 @@
+// Crust! A Rust testing framework for C. 🛠
+// Github: https://github.com/DobondiUVT/Crust for docs & files.
+//////////
 use std::path::{Path, PathBuf};
 use std::process::Command;
 use std::{env, fs};
